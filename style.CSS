@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: cursive;
+  color: blueviolet;
+}
+#main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+#div1 {
+  background-color: rgb(84, 83, 84);
+  width: 250px;
+  height: 250px;
+  animation: effect1 10s linear 0.1s infinite alternate;
+  transition: background-color 2s, width 2s, height 2s;
+}
+#div1:hover {
+  background-color: black;
+  width: 250px;
+  height: 250px;
+  animation: none;
+}
+@keyframes effect1 {
+  0% {
+    border: 100px solid violet;
+  }
+  10% {
+    border-right: 90px solid indigo;
+  }
+  20% {
+    border-bottom: 80px solid blue;
+  }
+  30% {
+    border-left: 70px solid green;
+  }
+  40% {
+    border-top: 60px solid yellow;
+  }
+
+  50% {
+    border: 50px solid rgb(255, 97, 39);
+  }
+  60% {
+    border-left: 40px solid orange;
+  }
+  70% {
+    border-bottom: 30px solid red;
+  }
+  80% {
+    border-right: 20px solid none;
+  }
+  90% {
+    border-top: 10px solid aquamarine;
+  }
+  100% {
+    border: 5px solid pink;
+  }
+}
+
+#div2 {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  transition: background-color 2s;
+  transform: scale(1, 2);
+}
+#div2:hover {
+  background-color: darkgray;
+  animation: effect2 2s infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes effect2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#div3 {
+  background-color: green;
+  width: 150px;
+  height: 150px;
+  transform: skew(-30deg, -10deg);
+  transition: transform 2s;
+}
+
+#div3:hover {
+  animation: effect3 1s;
+  animation-fill-mode: backwards;
+  transform: skew(0deg, 0deg);
+}
+@keyframes effect3 {
+  from {
+    background-color: green;
+  }
+  to {
+    background-color: pink;
+  }
+}
+
+#div4 {
+  background-color: yellow;
+  width: 150px;
+  height: 150px;
+  transform: translate(25px, 50px);
+  position: relative;
+  border-radius: 50%;
+  transition: height 2s width 2s;
+}
+#div4:hover {
+  height: 100px;
+  width: 100px;
+  animation: effect4 2s;
+  animation-fill-mode: forwards;
+  transform: translate(0, 0);
+}
+@keyframes effect4 {
+  0% {
+    transform: translate(25px, 50px);
+  }
+  20% {
+    transform: translate(20px, 40px);
+  }
+  40% {
+    transform: translate(15px, 30px);
+  }
+  60% {
+    transform: translate(10px, 20px);
+  }
+  80% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+
+  from {
+    border-radius: 50%;
+  }
+  to {
+    border-radius: 0;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+#div5 {
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: width 2s, height 2s;
+}
+
+#div5:hover {
+  width: 30px;
+  height: 30px;
+  animation: effect5 0.5s linear 0.1s 1 forwards;
+}
+
+@keyframes effect5 {
+  100% {
+    top: 0;
+    right: 0;
+  }
+  from {
+    border-radius: 50%;
+  }
+  to {
+    border-radius: 0%;
+  }
+}
