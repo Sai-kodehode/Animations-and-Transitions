@@ -164,23 +164,17 @@ h1 {
   height: 50px;
   border-radius: 50%;
   transition: width 2s, height 2s;
-}
-
-#div5:hover {
-  width: 30px;
-  height: 30px;
-  animation: effect5 0.5s linear 0.1s 1 forwards;
+  animation: effect5 1s ease-in infinite alternate;
 }
 
 @keyframes effect5 {
+  0% {
+    width: 50px;
+    height: 50px;
+    transform: translatey(-240px);
+  }
+
   100% {
-    top: 0;
-    right: 0;
-  }
-  from {
-    border-radius: 50%;
-  }
-  to {
-    border-radius: 0%;
+    transform: translateY(240px);
   }
 }
