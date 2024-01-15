@@ -19,6 +19,7 @@ h1 {
   height: 100vh;
 }
 
+/* Div1 */
 #div1 {
   background-color: rgb(84, 83, 84);
   width: 250px;
@@ -26,12 +27,15 @@ h1 {
   animation: effect1 10s linear 0.1s infinite alternate;
   transition: background-color 2s, width 2s, height 2s;
 }
+
+/* Hover for Div1 */
 #div1:hover {
   background-color: black;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   animation: none;
 }
+/* Animations for Div1 */
 @keyframes effect1 {
   0% {
     border: 100px solid violet;
@@ -68,28 +72,30 @@ h1 {
     border: 5px solid pink;
   }
 }
-
+/* Div2 */
 #div2 {
   background-color: red;
   width: 200px;
   height: 200px;
-  transition: background-color 2s;
   transform: scale(1, 2);
 }
+/* Hover for Div2 */
 #div2:hover {
-  background-color: darkgray;
   animation: effect2 2s infinite;
-  animation-fill-mode: forwards;
+  animation-fill-mode: backwards;
 }
+/* Animations for Div2 */
 @keyframes effect2 {
   from {
     transform: rotate(0deg);
+    background-color: red;
   }
   to {
     transform: rotate(359deg);
+    background-color: darkgray;
   }
 }
-
+/* Div3 */
 #div3 {
   background-color: green;
   width: 150px;
@@ -97,12 +103,13 @@ h1 {
   transform: skew(-30deg, -10deg);
   transition: transform 2s;
 }
-
+/* Hover for Div3 */
 #div3:hover {
   animation: effect3 1s;
   animation-fill-mode: backwards;
   transform: skew(0deg, 0deg);
 }
+/* Animations for Div3 */
 @keyframes effect3 {
   from {
     background-color: green;
@@ -111,7 +118,7 @@ h1 {
     background-color: pink;
   }
 }
-
+/* Div4 */
 #div4 {
   background-color: yellow;
   width: 150px;
@@ -121,13 +128,15 @@ h1 {
   border-radius: 50%;
   transition: height 2s width 2s;
 }
+/* Hover for Div4 */
 #div4:hover {
   height: 100px;
   width: 100px;
-  animation: effect4 2s;
+  animation: effect4 1s;
   animation-fill-mode: forwards;
   transform: translate(0, 0);
 }
+/* Animations for Div4 */
 @keyframes effect4 {
   0% {
     transform: translate(25px, 50px);
@@ -157,24 +166,34 @@ h1 {
     height: 100px;
   }
 }
-
+/* Div5 */
 #div5 {
   background-color: blue;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  transition: width 2s, height 2s;
+  transition: color 0.1s;
   animation: effect5 1s ease-in infinite alternate;
 }
 
+/* Hover for Div5 */
+#div5:hover {
+  background-color: red;
+}
+/* Animations for Div5 */
 @keyframes effect5 {
   0% {
+    width: 40px;
+    height: 60px;
+    transform: translateY(-240px);
+  }
+  50% {
     width: 50px;
     height: 50px;
-    transform: translatey(-240px);
   }
-
   100% {
+    width: 60px;
+    height: 40px;
     transform: translateY(240px);
   }
 }
